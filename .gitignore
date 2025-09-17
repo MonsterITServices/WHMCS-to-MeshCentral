@@ -1,0 +1,7 @@
+# IDE specific files
+.idea/
+*.swp
+*.swo
+
+# Local development config
+.env
