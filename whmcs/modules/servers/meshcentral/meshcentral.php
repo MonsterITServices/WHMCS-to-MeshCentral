@@ -27,7 +27,7 @@ function meshcentral_ConfigOptions() {
             'FriendlyName' => 'MeshCentral Server URL',
             'Type' => 'text',
             'Size' => '50',
-            'Description' => 'e.g., https://URLHERE.com',
+            'Description' => 'e.g., https://mon.monster-it.co.uk',
         ],
         'APIKey' => [
             'FriendlyName' => 'API Login Key',
@@ -63,7 +63,6 @@ function meshcentral_CreateAccount(array $params) {
         $api->createUser($username, $userPassword, $clientEmail, $permissions);
 
         // 3. Save key data to WHMCS for future management.
-        // Using dedicated fields is better, but this is a simple implementation.
         \WHMCS\Database\Capsule::table('tblhosting')
             ->where('id', $serviceId)
             ->update([

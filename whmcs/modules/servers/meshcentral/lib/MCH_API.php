@@ -74,12 +74,10 @@ class MCH_API {
     }
     
     public function getAgentInstallLink($groupId) {
-        // Agent Type 2 = Mesh Agent for Windows (.exe)
-        // You can find the meshid by creating a link manually and inspecting the URL.
         $response = $this->sendCommand(['action' => 'getmeshes']);
         $meshId = '';
         foreach ($response['meshes'] as $mesh) {
-            if ($mesh['name'] === 'Default') { // Or your specific mesh name
+            if ($mesh['name'] === 'Default') {
                 $meshId = $mesh['_id'];
                 break;
             }
