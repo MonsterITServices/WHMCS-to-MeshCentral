@@ -27,7 +27,7 @@ function meshcentral_ConfigOptions() {
             'FriendlyName' => 'MeshCentral Server URL',
             'Type' => 'text',
             'Size' => '50',
-            'Description' => 'e.g., https://mon.monster-it.co.uk',
+            'Description' => 'e.g., https://URLHERE.com',
         ],
         'APIKey' => [
             'FriendlyName' => 'API Login Key',
